@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Pamoki mascot"><title>Pamoki mascot</title><g transform="translate(0.00 0.00) scale(1.0000)">
+<path d="M100 58 L100 48" stroke="#5FA82A" stroke-width="6" stroke-linecap="round" fill="none"/>
+<path d="M100 50 C 86 48, 72 34, 74 20 C 90 20, 102 34, 100 50 Z" fill="#8BD346"/>
+<path d="M100 48 C 112 40, 128 30, 132 16 C 116 14, 100 28, 100 48 Z" fill="#8BD346"/>
+<ellipse cx="100" cy="120" rx="80" ry="68" fill="#6C4CF1"/>
+<ellipse cx="66" cy="84" rx="18" ry="10" fill="#FFFFFF" opacity="0.28" transform="rotate(-25 66 84)"/>
+<ellipse cx="58" cy="134" rx="11" ry="7" fill="#FF8FB8" opacity="0.85"/><ellipse cx="142" cy="134" rx="11" ry="7" fill="#FF8FB8" opacity="0.85"/>
+<circle cx="76" cy="114" r="10" fill="#1E1838"/><circle cx="124" cy="114" r="10" fill="#1E1838"/>
+<circle cx="79" cy="110" r="3.5" fill="#FFFFFF"/><circle cx="127" cy="110" r="3.5" fill="#FFFFFF"/>
+<path d="M88 136 Q100 149 112 136" stroke="#1E1838" stroke-width="6" stroke-linecap="round" fill="none"/>
+</g></svg>

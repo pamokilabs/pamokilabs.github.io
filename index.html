@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pamoki: make tiny games, coming soon</title>
+<meta name="description" content="Pamoki: make tiny games, share them, play together. Coming soon.">
+<meta property="og:title" content="Pamoki: coming soon">
+<meta property="og:description" content="Make tiny games. Share. Play.">
+<meta name="theme-color" content="#6C4CF1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='46' fill='%236C4CF1'/%3E%3Cpath d='M100 50 C 86 48, 72 34, 74 20 C 90 20, 102 34, 100 50 Z' fill='%238BD346'/%3E%3Cpath d='M100 48 C 112 40, 128 30, 132 16 C 116 14, 100 28, 100 48 Z' fill='%238BD346'/%3E%3Cellipse cx='100' cy='120' rx='80' ry='68' fill='white'/%3E%3Ccircle cx='76' cy='114' r='10' fill='%231E1838'/%3E%3Ccircle cx='124' cy='114' r='10' fill='%231E1838'/%3E%3Cpath d='M88 136 Q100 149 112 136' stroke='%231E1838' stroke-width='6' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#6C4CF1; --purple-dark:#4B2FC9; --leaf:#8BD346;
+    --ink:#1E1838; --muted:#5A5478; --soft:#F4F1FF; --white:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    font-family:'Fredoka',system-ui,-apple-system,sans-serif;
+    color:var(--ink); background:var(--soft);
+    display:flex; flex-direction:column; min-height:100vh;
+  }
+  main{
+    flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:48px 24px; gap:20px;
+  }
+  .mascot{width:min(220px,48vw); height:auto; animation:bob 3.2s ease-in-out infinite; transform-origin:50% 90%}
+  @keyframes bob{
+    0%,100%{transform:translateY(0) scale(1,1)}
+    45%{transform:translateY(-14px) scale(.98,1.02)}
+    55%{transform:translateY(-14px) scale(.98,1.02)}
+  }
+  .blink{animation:blink 5s infinite; transform-origin:center; transform-box:fill-box}
+  @keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+  @media (prefers-reduced-motion:reduce){.mascot,.blink{animation:none}}
+  h1{
+    margin:0; font-size:clamp(64px,14vw,132px); font-weight:600; letter-spacing:-.03em; line-height:1;
+  }
+  .tag{margin:0; font-size:clamp(20px,3.6vw,28px); font-weight:500; color:var(--muted)}
+  .badge{
+    display:inline-block; margin-top:8px; padding:10px 20px; border-radius:999px;
+    background:var(--white); color:var(--purple-dark); font-weight:600; font-size:16px;
+    letter-spacing:.08em; text-transform:uppercase; box-shadow:0 4px 14px rgba(30,24,56,.08);
+  }
+  .actions{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:16px}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; min-height:48px; padding:0 24px;
+    border-radius:999px; font:inherit; font-weight:600; font-size:17px; text-decoration:none;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:focus-visible{outline:3px solid var(--ink); outline-offset:3px}
+  .btn-primary{background:var(--purple); color:var(--white)}
+  .btn-primary:hover{background:var(--purple-dark); transform:translateY(-2px)}
+  .btn-ghost{background:var(--white); color:var(--ink); border:2px solid #E2DCF7}
+  .btn-ghost:hover{border-color:var(--purple); transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px}
+  footer{padding:24px; text-align:center; font-size:15px; color:var(--muted)}
+  footer a{color:var(--purple-dark)}
+</style>
+</head>
+<body>
+<main>
+  <svg class="mascot" viewBox="0 0 200 200" role="img" aria-label="Pamoki mascot: a round purple creature with a green sprout">
+    <path d="M100 58 L100 48" stroke="#5FA82A" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M100 50 C 86 48, 72 34, 74 20 C 90 20, 102 34, 100 50 Z" fill="#8BD346"/>
+    <path d="M100 48 C 112 40, 128 30, 132 16 C 116 14, 100 28, 100 48 Z" fill="#8BD346"/>
+    <ellipse cx="100" cy="120" rx="80" ry="68" fill="#6C4CF1"/>
+    <ellipse cx="66" cy="84" rx="18" ry="10" fill="#FFFFFF" opacity=".28" transform="rotate(-25 66 84)"/>
+    <ellipse cx="58" cy="134" rx="11" ry="7" fill="#FF8FB8" opacity=".85"/>
+    <ellipse cx="142" cy="134" rx="11" ry="7" fill="#FF8FB8" opacity=".85"/>
+    <g class="blink">
+      <circle cx="76" cy="114" r="10" fill="#1E1838"/>
+      <circle cx="124" cy="114" r="10" fill="#1E1838"/>
+      <circle cx="79" cy="110" r="3.5" fill="#FFFFFF"/>
+      <circle cx="127" cy="110" r="3.5" fill="#FFFFFF"/>
+    </g>
+    <path d="M88 136 Q100 149 112 136" stroke="#1E1838" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <h1>pamoki</h1>
+  <p class="tag">make tiny games · share · play</p>
+  <span class="badge">Coming soon</span>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://instagram.com/hellopamoki" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+      Follow @hellopamoki
+    </a>
+    <a class="btn btn-ghost" href="https://github.com/pamokilabs" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Pamoki Labs on GitHub
+    </a>
+  </div>
+</main>
+<footer>
+  © 2026 Pamoki · <a href="mailto:hello@pamoki.com">hello@pamoki.com</a>
+</footer>
+</body>
+</html>
